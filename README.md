@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="assets/icons/compress512.png">
+    <img src="assets/icons/compress-96.png">
 </p>
 
 <h1 align="center">Image Resizer</h1>
