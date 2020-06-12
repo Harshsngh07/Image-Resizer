@@ -1,0 +1,22 @@
+{
+  "name": "image-resizer",
+  "version": "1.0.0",
+  "description": "An electron app to compress images",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshsngh07/Image-Resizer.git"
+  },
+  "author": "Harsh Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Harshsngh07/Image-Resizer/issues"
+  },
+  "homepage": "https://github.com/Harshsngh07/Image-Resizer#readme",
+  "devDependencies": {
+    "electron": "^9.0.3"
+  }
+}
