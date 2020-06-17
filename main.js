@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu, globalShortcut } = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
 
 //Set env
 process.env.NODE_ENV = "development";
@@ -7,6 +7,7 @@ const isDev = process.env.NODE_ENV !== "production" ? true : false;
 const isMac = process.platform == "darwin" ? true : false;
 
 let mainWindow;
+let aboutWindow;
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
@@ -15,9 +16,22 @@ function createMainWindow() {
     height: 600,
     icon: "./assets/icons/compress-96.png",
     resizable: isDev,
+    backgroundColor: "white",
   });
 
   mainWindow.loadFile("./app/index.html");
+}
+function createAboutWindow() {
+  aboutWindow = new BrowserWindow({
+    title: "About Image Resizer",
+    width: 300,
+    height: 300,
+    icon: "./assets/icons/compress-96.png",
+    resizable: false,
+    backgroundColor: "white",
+  });
+
+  aboutWindow.loadFile("./app/about.html");
 }
 
 app.on("ready", () => {
@@ -26,27 +40,55 @@ app.on("ready", () => {
   const mainMenu = Menu.buildFromTemplate(menu);
   Menu.setApplicationMenu(mainMenu);
 
-  globalShortcut.register("CmdOrCtrl+R", () => mainWindow.reload());
-  globalShortcut.register("CmdOrCtrl+shift+I", () =>
-    mainWindow.toggleDevTools()
-  );
+  // globalShortcut.register("CmdOrCtrl+R", () => mainWindow.reload());
+  // globalShortcut.register("CmdOrCtrl+shift+I", () =>
+  //   mainWindow.toggleDevTools()
+  // );
 
   mainWindow.on("closed", () => (mainWindow = null));
 });
 
 const menu = [
-  ...(isMac ? [{ role: "appMenu" }] : []),
+  ...(isMac
+    ? [
+        {
+          label: app.name,
+          submenu: [
+            {
+              label: "About",
+              click: createAboutWindow,
+            },
+          ],
+        },
+      ]
+    : []),
 
   {
-    label: "File",
-    submenu: [
-      {
-        label: "Quit",
-        accelerator: "CmdOrCtrl+W",
-        click: () => app.quit(),
-      },
-    ],
+    role: "fileMenu",
   },
+
+  ...(!isMac
+    ? [
+        {
+          label: "Help",
+          submenu: [{ label: "About", click: createAboutWindow }],
+        },
+      ]
+    : []),
+
+  ...(isDev
+    ? [
+        {
+          label: "Developer",
+          submenu: [
+            { role: "reload" },
+            { role: "forcereload" },
+            { type: "separator" },
+            { role: "toggledevtools" },
+          ],
+        },
+      ]
+    : []),
 ];
 
 app.on("window-all-closed", () => {
