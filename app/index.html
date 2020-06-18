@@ -8,8 +8,35 @@
       content="script-src 'self' 'unsafe-inline';"
     />
     <title>Image Resizer</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Image Resizer</h1>
+    <div class="container">
+      <h1><img src="../assets/icons/compress-96.png" />Image Resizer</h1>
+      <span><p>Select an image to resize</p></span>
+      <button type="button" class="btn btn-1 btn-lg btn-block">
+        Browse
+      </button>
+
+      <p class="text1">
+        <strong>Quality:</strong>
+        <em>The lower the quality, the smaller the filesize</em>
+      </p>
+
+      <p class="range-field">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          class="form-control-range"
+          id="formControlRange"
+        />
+      </p>
+    </div>
   </body>
 </html>
