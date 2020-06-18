@@ -19,24 +19,31 @@
     <div class="container">
       <h1><img src="../assets/icons/compress-96.png" />Image Resizer</h1>
       <span><p>Select an image to resize</p></span>
-      <button type="button" class="btn btn-1 btn-lg btn-block">
-        Browse
-      </button>
+      <form action="">
+        <button type="button" class="btn btn-1 btn-lg btn-block">
+          Browse
+        </button>
 
-      <p class="text1">
-        <strong>Quality:</strong>
-        <em>The lower the quality, the smaller the filesize</em>
-      </p>
+        <p style="padding-top: 20px;">
+          <strong>Quality:</strong>
+          <em style="font-size: 20px;"
+            >The lower the quality, the smaller the filesize</em
+          >
+        </p>
 
-      <p class="range-field">
-        <input
-          type="range"
-          min="0"
-          max="100"
-          class="form-control-range"
-          id="formControlRange"
-        />
-      </p>
+        <p class="range-field">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            class="form-control-range"
+            id="formControlRange"
+          />
+        </p>
+        <button type="submit" class="btn btn-1 btn-lg btn-block">
+          Resize
+        </button>
+      </form>
     </div>
   </body>
 </html>
