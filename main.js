@@ -24,7 +24,7 @@ function createMainWindow() {
 function createAboutWindow() {
   aboutWindow = new BrowserWindow({
     title: "About Image Resizer",
-    width: 300,
+    width: 500,
     height: 300,
     icon: "./assets/icons/compress-96.png",
     resizable: false,
