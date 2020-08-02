@@ -6,7 +6,7 @@
 
 An Electron app which compresses(resizes) the given image.
 
-[IMG]("assets/img.jpeg")
+[Scrnshot] <p><img src="assets/img.jpg"></p>
 
 ## Usage
 
