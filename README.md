@@ -4,7 +4,7 @@
 
 <h1 align="center">Image Resizer</h1>
 
-An Electron desktop app which compresses(resizes) the given image.
+An Electron desktop app which compresses(resizes) images.
 
 [Scrnshot] <p><img src="assets/img.jpg"></p>
 
