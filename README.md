@@ -6,6 +6,8 @@
 
 An Electron app which compresses(resizes) the given image.
 
+[IMG]("assets/img.jpeg")
+
 ## Usage
 
 ### Install Dependencies
