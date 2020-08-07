@@ -1,4 +1,12 @@
 <p align="center">
+  <img src="https://img.shields.io/github/issues/Harshsngh07/Image-Resizer?style=flat-square"> 
+  <img src="https://img.shields.io/github/forks/Harshsngh07/Image-Resizer?style=social">
+  <img src="https://img.shields.io/github/stars/Harshsngh07/Image-Resizer">
+  <img src="https://img.shields.io/github/license/Harshsngh07/Image-Resizer">
+</p>
+
+
+<p align="center">
     <img src="assets/icons/compress-96.png">
 </p>
 
