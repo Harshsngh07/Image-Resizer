@@ -12,9 +12,11 @@
 
 <h1 align="center">Image Resizer</h1>
 
+<p align="center">
 An Electron desktop app which compresses(resizes) images.
 
-[Scrnshot] <p><img src="assets/img.jpg"></p>
+<p align="center"><img src="assets/img.jpg"></p>
+</p>
 
 ## Usage
 
