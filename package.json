@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/Harshsngh07/Image-Resizer#readme",
   "devDependencies": {
-    "electron": "^9.0.3",
+    "electron": "^11.5.0",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
